@@ -126,7 +126,7 @@ slidy::
   Slidy后端的相关文档在发行版本的`doc/slidy.txt`文件中或者 {website}slidy.html[此处网页]。
 
 wordpress::
-  “ html4”后端的一个较小变体，用于支持http://srackham.wordpress.com/blogpost1/[博客文章]。
+  “ html4”后端的一个较小变体，用于支持 http://srackham.wordpress.com/blogpost1/[博客文章]。
 
 latex::
   实验性LaTeX后端。
@@ -137,11 +137,9 @@ latex::
 AsciiDoc带有两个后端别名:'html'('xhtml11'的别名)和
 'docbook'('docbook45'的别名).
 
-You can assign (or reassign) backend aliases by setting an AsciiDoc
-attribute named like `backend-alias-<alias>` to an AsciiDoc backend
-name. For example, the following backend alias attribute definitions
-appear in the `[attributes]` section of the global `asciidoc.conf`
-configuration file:
+您可以通过将名为`backend-alias- <别名>`的AsciiDoc属性设置为AsciiDoc后端名称来分配（或重新分配）后端别名。
+例如，下面的这个后端别名属性定义包含在全局`asciidoc.conf`文件的 `[attributes]` 部分中。
+配置文件如下：
 
   backend-alias-html=xhtml11
   backend-alias-docbook=docbook45
@@ -149,20 +147,14 @@ configuration file:
 [[X100]]
 后端插件
 ~~~~
-The asciidoc(1) `--backend` option is also used to install and manage
-backend <<X101,plugins>>.
+asciidoc(1) 命令的 `--backend`选项也用来安装和管理后端 <<X101,插件>>。
 
-- A backend plugin is used just like the built-in backends.
-- Backend plugins <<X27,take precedence>> over built-in backends with
-  the same name.
-- You can use the `{asciidoc-confdir}` <<X60, intrinsic attribute>> to
-  refer to the built-in backend configuration file location from
-  backend plugin configuration files.
-- You can use the `{backend-confdir}` <<X60, intrinsic attribute>> to
-  refer to the backend plugin configuration file location.
-- By default backends plugins are installed in
-  `$HOME/.asciidoc/backends/<backend>` where `<backend>` is the
-  backend name.
+- 后端插件的用法与内置后端一样。
+- 后端插件优先于具有相同名称的内置后端。
+- 您可以使用{asciidoc-confdir} <<X60,内部属性>> 从后端插件配置文件引用内置的后端配置文件位置。
+- 您可以使用{backend-confdir} <<X60,内部属性>> 来引用后端插件配置文件的位置。
+- 后端插件默认安装在`$HOME/.asciidoc/backends/<backend>` 中。
+  其中 `<backend>` 是后端的名称。
 
 
 DocBook
