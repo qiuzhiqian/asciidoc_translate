@@ -86,68 +86,56 @@ AsciiDoc定义了标准的DocBook文章的题前和题尾<<X93,节标记模板>>
 
 .书籍文档示例
 书籍::
-  The `./doc/book.txt` file in the AsciiDoc distribution.
+  AsciiDoc发行版本中的 `./doc/book.txt` 文件。
 
 多部分书籍::
-  The `./doc/book-multi.txt` file in the AsciiDoc distribution.
+  AsciiDoc发行版本中的  `./doc/book-multi.txt` 文件。
 
 帮助页面
 ~~~~
-Used to generate roff format UNIX manual pages.  AsciiDoc manpage
-documents observe special header title and section naming conventions
--- see the <<X1,Manpage Documents>> section for details.
+用于生成roff格式的UNIX手册页。AsciiDoc帮助文档遵守特殊的标题标题和节命名约定。  AsciiDoc manpage
+-- 详情请查看 <<X1,帮助文档>> 部分.
 
-AsciiDoc defines the 'synopsis' <<X93,section markup template>> to
-generate the DocBook `refsynopsisdiv` section.
+AsciiDoc通过定义 `摘要` 来生成 DocBook文档的 `refsynopsisdiv` 部分。
 
-See also the asciidoc(1) man page source (`./doc/asciidoc.1.txt`) from
-the AsciiDoc distribution.
+也可以查看AsciiDoc发布版本中的帮助手册源文件(`./doc/asciidoc.1.txt`)。
 
 
 [[X5]]
 AsciiDoc后端
 ---------
-The asciidoc(1) command translates an AsciiDoc formatted file to the
-backend format specified by the `-b` (`--backend`) command-line
-option. asciidoc(1) itself has little intrinsic knowledge of backend
-formats, all translation rules are contained in customizable cascading
-configuration files. Backend specific attributes are listed in the
-<<X88,Backend Attributes>> section.
+asciidoc命令会将AsciiDoc格式文件转换为由 `-b`(`--backend`)选项参数指定的后端格式。
+asciidoc(1)本身几乎不了解后端格式，所有转换规则都包含在可自定义的级联配置文件中。
+后端特定属性在 <<X88,后端属性>>部分中列出。
 
 docbook45::
-  Outputs DocBook XML 4.5 markup.
+  输出DocBook XML 4.5标记。
 
 html4::
-  This backend generates plain HTML 4.01 Transitional markup.
+  该后端生成纯HTML 4.01过渡标记。
 
 xhtml11::
-  This backend generates XHTML 1.1 markup styled with CSS2. Output
-  files have an `.html` extension.
+  该后端生成使用CSS2样式的XHTML 1.1标记。 输出文件具有`.html`扩展名。
 
 html5::
-  This backend generates HTML 5 markup, apart from the inclusion of
-  <<X98,audio and video block macros>> it is functionally identical to
-  the 'xhtml11' backend.
+  该后端生成HTML5标记，除了包含音频和视频块宏之外，它在功能上与“ xhtml11”后端相同。
 
 slidy::
-  Use this backend to generate self-contained
-  http://www.w3.org/Talks/Tools/Slidy2/[Slidy] HTML slideshows for
-  your web browser from AsciiDoc documents. The Slidy backend is
-  documented in the distribution `doc/slidy.txt` file and
-  {website}slidy.html[online].
+  使用此后端可以从AsciiDoc文档为Web浏览器生成独立的
+  http://www.w3.org/Talks/Tools/Slidy2/[Slidy] HTML幻灯片。
+  Slidy后端的相关文档在发行版本的`doc/slidy.txt`文件中或者 {website}slidy.html[此处网页]。
 
 wordpress::
-  A minor variant of the 'html4' backend to support
-  http://srackham.wordpress.com/blogpost1/[blogpost].
+  “ html4”后端的一个较小变体，用于支持http://srackham.wordpress.com/blogpost1/[博客文章]。
 
 latex::
-  Experimental LaTeX backend.
+  实验性LaTeX后端。
 
 后端别名
 ~~~~
-Backend aliases are alternative names for AsciiDoc backends.  AsciiDoc
-comes with two backend aliases: 'html' (aliased to 'xhtml11') and
-'docbook' (aliased to 'docbook45').
+后端别名是AsciiDoc后端的备用名称。
+AsciiDoc带有两个后端别名:'html'('xhtml11'的别名)和
+'docbook'('docbook45'的别名).
 
 You can assign (or reassign) backend aliases by setting an AsciiDoc
 attribute named like `backend-alias-<alias>` to an AsciiDoc backend
