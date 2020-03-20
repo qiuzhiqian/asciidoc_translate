@@ -159,47 +159,31 @@ asciidoc(1) 命令的 `--backend`选项也用来安装和管理后端 <<X101,插
 
 DocBook
 -------
-AsciiDoc generates 'article', 'book' and 'refentry'
-http://www.docbook.org/[DocBook] documents (corresponding to the
-AsciiDoc 'article', 'book' and 'manpage' document types).
+AsciiDoc生成'文章'，'书籍'和'文档'类型的DocBook文档（与AsciiDoc'文章'，'书籍'和'手册页'文档类型相对应）。
 
-Most Linux distributions come with conversion tools (collectively
-called a toolchain) for <<X12,converting DocBook files>> to
-presentation formats such as Postscript, HTML, PDF, EPUB, DVI,
-PostScript, LaTeX, roff (the native man page format), HTMLHelp,
-JavaHelp and text.  There are also programs that allow you to view
-DocBook files directly, for example http://live.gnome.org/Yelp[Yelp]
-(the GNOME help viewer).
+大多数Linux发行版都带有转换工具（统称为工具链），用于将 <<X12,DocBook文件转换>> 为演示文稿格式，
+例如Postscript，HTML，PDF，EPUB，DVI，PostScript，LaTeX，roff（本机手册页格式），HTMLHelp，JavaHelp和文本 。
+还有一些程序可让您直接查看DocBook文件，例如 http://live.gnome.org/Yelp[Yelp]（GNOME帮助查看器）。
 
 [[X12]]
 将DocBook转换为其他文件格式
 ~~~~~~~~~~~~~~~~~
-DocBook files are validated, parsed and translated various
-presentation file formats using a combination of applications
-collectively called a DocBook 'tool chain'. The function of a tool
-chain is to read the DocBook markup (produced by AsciiDoc) and
-transform it to a presentation format (for example HTML, PDF, HTML
-Help, EPUB, DVI, PostScript, LaTeX).
+使用称为DocBook'工具链'的应用程序组合来验证、解析和翻译DocBook文件的各种演示文稿文件格式。
+这个工具链的一个作用就是读取DocBook标记(由AsciiDoc产生)，并把它们转换成一种演示文档格式(例如：
+HTML、PDF、HTML Help、EPUB、DVI，PostScript或者LaTex)。
 
-A wide range of user output format requirements coupled with a choice
-of available tools and stylesheets results in many valid tool chain
-combinations.
+各种各样的用户输出格式要求以及可用工具和样式表的选择导致了许多有效的工具链组合。
 
 [[X43]]
 a2x工具链包装
 ~~~~~~~~
-One of the biggest hurdles for new users is installing, configuring
-and using a DocBook XML toolchain. `a2x(1)` can help -- it's a
-toolchain wrapper command that will generate XHTML (chunked and
-unchunked), PDF, EPUB, DVI, PS, LaTeX, man page, HTML Help and text
-file outputs from an AsciiDoc text file.  `a2x(1)` does all the grunt
-work associated with generating and sequencing the toolchain commands
-and managing intermediate and output files.  `a2x(1)` also optionally
-deploys admonition and navigation icons and a CSS stylesheet. See the
-`a2x(1)` man page for more details. In addition to `asciidoc(1)` you
-also need <<X40,xsltproc(1)>>, <<X13,DocBook XSL Stylesheets>> and
-optionally: <<X31,dblatex>> or <<X14,FOP>> (to generate PDF);
-`w3m(1)` or `lynx(1)` (to generate text).
+新用户面临的最大障碍之一是安装，配置和使用DocBook XML工具链。
+我们可以通过 `a2x(1)` 命令来获取一些帮助 -- 这是一个工具链包装程序命令。
+该命令会生成XHTML（分块和非分块），PDF，EPUB，DVI，PS，LaTeX，手册页，HTML帮助以及来自AsciiDoc文本文件的文本文件输出。
+a2x(1)会完成所有与生成和排序工具链命令以及管理中间文件和输出文件相关的繁琐工作。
+`a2x(1)` 还可以选择性的部署警告和导航图标以及CSS样式表。
+详细说明请查看 `a2x(1)` 的帮助手册。
+除了asciidoc(1)，您还需要xsltproc(1)，DocBook XSL样式表以及可选的:dblatex或FOP（生成PDF）; w3m(1)或lynx(1)（生成文本）。
 
 The following examples generate `doc/source-highlight-filter.pdf` from
 the AsciiDoc `doc/source-highlight-filter.txt` source file. The first
