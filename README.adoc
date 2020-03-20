@@ -1,0 +1,8 @@
+AsciiDoc official documnet translate
+====================================
+Xia Mengliang <xiamengliang@gmail.com>
+:github: https://github.com/qiuzhiqian
+
+这是一个对AsciiDoc官方文档的个人翻译。本人非英文专业，有些地方翻译不当的话，希望大家能提出pr。
+
+link:index.adoc[开始阅读]
