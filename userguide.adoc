@@ -491,11 +491,10 @@ footnote:[这是一个粗略的结构指南，而不是严格的语法定义]:
 - 表头可以包含 <<X18,属性条目>>, 典型的有
   'doctype', 'lang', 'encoding', 'icons', 'data-uri', 'toc',
   'numbered'。
-- Header attributes are overridden by command-line attributes.
-- If the header contains non-UTF-8 characters then the 'encoding' must
-  precede the header (either in the document or on the command-line).
+- 标头属性被命令行属性覆盖。
+- 如果标头包含非UTF-8字符，则 'encoding' 必须在标头之前（在文档中或在命令行中）。
 
-Here's an example AsciiDoc document header:
+这是一个AsciiDoc文档标题的示例:
 
   Writing Documentation using AsciiDoc
   ====================================
@@ -503,44 +502,35 @@ Here's an example AsciiDoc document header:
   v2.0, February 2003:
   Rewritten for version 2 release.
 
-The author information line contains the author's name optionally
-followed by the author's email address. The author's name is formatted
-like:
+作者信息行包含作者的姓名，并可选地后面带有作者的电子邮件地址。 
+作者的姓名格式如下:
 
   firstname[ [middlename ]lastname][ <email>]]
 
-i.e. a first name followed by optional middle and last names followed
-by an email address in that order.  Multi-word first, middle and last
-names can be entered using the underscore as a word separator.  The
-email address comes last and must be enclosed in angle <> brackets.
-Here a some examples of author information lines:
+即名字，然后是可选的中间名和姓氏，然后是该电子邮件地址。
+可以使用下划线作为单词分隔符来输入多单词的名字，中间名和姓氏。
+电子邮件地址位于最后，必须用尖括号<>括起来。
+这里是一些作者信息行的例子:
 
   Joe Bloggs <jbloggs@mymail.com>
   Joe Bloggs
   Vincent Willem van_Gogh
 
-If the author line does not match the above specification then the
-entire author line is treated as the first name.
+如果作者行与上述规范不匹配，则将整个作者行视为名字。
 
-The optional revision information line follows the author information
-line. The revision information can be one of two formats:
+可选的修订信息行位于作者信息行之后。
+修订信息可以是以下两种格式之一：
 
-. An optional document revision number followed by an optional
-  revision date followed by an optional revision remark:
+. 可选文档修订号(版本号)，后跟可选修订日期，后跟可选修订说明：
 +
 --
-  * If the revision number is specified it must be followed by a
-    comma.
-  * The revision number must contain at least one numeric character.
-  * Any non-numeric characters preceding the first numeric character
-    will be dropped.
-  * If a revision remark is specified it must be preceded by a colon.
-    The revision remark extends from the colon up to the next blank
-    line, attribute entry or comment and is subject to normal text
-    substitutions.
-  * If a revision number or remark has been set but the revision date
-    has not been set then the revision date is set to the value of the
-    'docdate' attribute.
+  * 如果指定了修订号，则必须在其后加上逗号。
+  * 版本号必须至少包含一个数字字符。
+  * 第一个数字字符之前的所有非数字字符都将被删除。
+  * 如果指定了修订说明，则必须在前面加上冒号。
+    修订说明从冒号一直延伸到下一个空白行，属性条目或注释，并且可以使用常规文本替换。
+  * 如果设置了修订号或备注，但尚未设置修订日期，
+    则将修订日期设置为 'docdate' 属性的值。
 
 例如:
 
@@ -553,34 +543,26 @@ line. The revision information can be one of two formats:
   :Rewritten for version 2 release.
 --
 
-. The revision information line can also be an RCS/CVS/SVN $Id$
-  marker:
+. 修订信息行还可以是RCS/CVS/SVN $Id$标记：
 +
 --
-  * AsciiDoc extracts the 'revnumber', 'revdate', and 'author'
-    attributes from the $Id$ revision marker and displays them in the
-    document header.
-  * If an $Id$ revision marker is used the header author line can be
-    omitted.
+  * AsciiDoc从$Id$修订标记中提取 'revnumber'，'revdate' 和 'author' 属性，
+    并将其显示在文档标题中。
+  * 如果使用$Id$修订标记，则可以省略标题作者行。
 
-Example:
+例如:
 
   $Id: mydoc.txt,v 1.5 2009/05/17 17:58:44 jbloggs Exp $
 --
 
-You can override or set header parameters by passing 'revnumber',
-'revremark', 'revdate', 'email', 'author', 'authorinitials',
-'firstname' and 'lastname' attributes using the asciidoc(1) `-a`
-(`--attribute`) command-line option. For example:
+您可以通过使用asciidoc（1）`-a`（`--attribute`）命令行选项传递'revnumber'，'revremark'，'revdate'，'email'，'author'，'authorinitials'，'firstname' 和 'lastname' 属性来覆盖或设置标头参数。 
+例如:
 
   $ asciidoc -a revdate=2004/07/27 article.txt
 
-Attribute entries can also be added to the header for substitution in
-the header template with <<X18,Attribute Entry>> elements.
+还可以将属性条目添加到标题中，以便在标题模板中用 <<X18,Attribute Entry>> 元素替换。
 
-The 'title' element in HTML outputs is set to the AsciiDoc document
-title, you can set it to a different value by including a 'title'
-attribute entry in the document header.
+HTML输出中的 'title' 元素设置为AsciiDoc文档标题，您可以通过在文档标题中包含 'title' 属性条目将其设置为其他值。
 
 [[X87]]
 其他文件标题信息
