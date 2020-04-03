@@ -448,22 +448,17 @@ name `foo.js`.
 
 文档结构
 ----
-An AsciiDoc document consists of a series of <<X8,block elements>>
-starting with an optional document Header, followed by an optional
-Preamble, followed by zero or more document Sections.
+AsciiDoc文档由一系列块元素组成，这些块元素以可选的文档标题开头，然后是可选的前言(Preamble)，然后是零个或多个文档节。
 
-Almost any combination of zero or more elements constitutes a valid
-AsciiDoc document: documents can range from a single sentence to a
-multi-part book.
+几乎零个或多个元素的任何组合都构成一个有效的AsciiDoc文档：
+文档的范围可以从单个句子到多部分的书。
 
 块级元素
 ~~~~
-Block elements consist of one or more lines of text and may contain
-other block elements.
+块元素包含一行或多行文本，并且可以包含其他块元素。
 
-The AsciiDoc block structure can be informally summarized as follows
-footnote:[This is a rough structural guide, not a rigorous syntax
-definition]:
+AsciiDoc块结构可以非正式地总结如下
+footnote:[这是一个粗略的结构指南，而不是严格的语法定义]:
 
   Document      ::= (Header?,Preamble?,Section*)
   Header        ::= (Title,(AuthorInfo,RevisionInfo?)?)
@@ -482,36 +477,30 @@ definition]:
   ListLabel     ::= (ListTerm+)
   ListItem      ::= (ItemText,(List|ListParagraph|ListContinuation)*)
 
-Where:
+此处:
 
-- '?' implies zero or one occurrence, '+' implies one or more
-  occurrences, '*' implies zero or more occurrences.
-- All block elements are separated by line boundaries.
-- `BlockId`, `AttributeEntry` and `AttributeList` block elements (not
-  shown) can occur almost anywhere.
-- There are a number of document type and backend specific
-  restrictions imposed on the block syntax.
-- The following elements cannot contain blank lines: Header, Title,
+- '?' 表示出现零次或者一次, '+' 表示出现一次或者多次, '*' 表示出现零次或者多次
+- 所有块元素都由线边界分隔。
+- `BlockId`, `AttributeEntry` and `AttributeList` 
+  这些块元素(不会显示出来) 可以出现在任何地方。
+- 对块语法有许多文档类型和特定于后端的限制。
+- 以下元素不能包含空行: Header, Title,
   Paragraph, ItemText.
-- A ListParagraph is a Paragraph with its 'listelement' option set.
-- A ListContinuation is a <<X15,list continuation element>>.
+- ListParagraph是具有 'listelement' 选项集的段落。
+- ListContinuation 是一个 <<X15,列表后续元素>>.
 
 [[X95]]
 标题头部
 ~~~~
-The Header contains document meta-data, typically title plus optional
-authorship and revision information:
+标头包含文档元数据，通常是标题以及可选的作者和修订信息:
 
-- The Header is optional, but if it is used it must start with a
-  document <<X17,title>>.
-- Optional Author and Revision information immediately follows the
-  header title.
-- The document header must be separated from the remainder of the
-  document by one or more blank lines and cannot contain blank lines.
-- The header can include comments.
-- The header can include <<X18,attribute entries>>, typically
+- 标头是可选的，但是如果使用标头，则必须以文档 <<X17,标题>> 开头。
+- 标头标题后面紧跟着可选的作者和修订信息。
+- 文档标题必须与文档的其余部分用一个或多个空白行分隔，并且不能包含空白行。
+- 标头可以包含注释。
+- 表头可以包含 <<X18,属性条目>>, 典型的有
   'doctype', 'lang', 'encoding', 'icons', 'data-uri', 'toc',
-  'numbered'.
+  'numbered'。
 - Header attributes are overridden by command-line attributes.
 - If the header contains non-UTF-8 characters then the 'encoding' must
   precede the header (either in the document or on the command-line).
