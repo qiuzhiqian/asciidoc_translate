@@ -185,39 +185,29 @@ a2x(1)会完成所有与生成和排序工具链命令以及管理中间文件�
 详细说明请查看 `a2x(1)` 的帮助手册。
 除了asciidoc(1)，您还需要xsltproc(1)，DocBook XSL样式表以及可选的:dblatex或FOP（生成PDF）; w3m(1)或lynx(1)（生成文本）。
 
-The following examples generate `doc/source-highlight-filter.pdf` from
-the AsciiDoc `doc/source-highlight-filter.txt` source file. The first
-example uses `dblatex(1)` (the default PDF generator) the second
-example forces FOP to be used:
+以下示例从AsciiDoc `doc/source-highlight-filter.txt` 源文件生成 `doc/source-highlight-filter.pdf` 文件。
+第一个示例使用dblatex(1)（默认的PDF生成器），第二个示例强制使用FOP：
 
   $ a2x -f pdf doc/source-highlight-filter.txt
   $ a2x -f pdf --fop doc/source-highlight-filter.txt
 
-See the `a2x(1)` man page for details.
+详情请查看 `a2x(1)` 参考手册。
 
-TIP: Use the `--verbose` command-line option to view executed
-toolchain commands.
+TIP: 使用--verbose命令行选项查看执行的工具链命令。
 
 HTML生成
 ~~~~~~
-AsciiDoc produces nicely styled HTML directly without requiring a
-DocBook toolchain but there are also advantages in going the DocBook
-route:
+AsciiDoc无需DocBook工具链即可直接生成样式精美的HTML，但是走DocBook路线也有很多优势:
 
-- HTML from DocBook can optionally include automatically generated
-  indexes, tables of contents, footnotes, lists of figures and tables.
-- DocBook toolchains can also (optionally) generate separate (chunked)
-  linked HTML pages for each document section.
-- Toolchain processing performs link and document validity checks.
-- If the DocBook 'lang' attribute is set then things like table of
-  contents, figure and table captions and admonition captions will be
-  output in the specified language (setting the AsciiDoc 'lang'
-  attribute sets the DocBook 'lang' attribute).
+- DocBook的HTML可以选择包括自动生成的索引，目录，脚注，图形和表格列表。
+- DocBook工具链还可以（可选）为每个文档部分生成单独的（分块）链接的HTML页面。
+- 工具链处理执行链接和文档有效性检查。
+- 如果设置了DocBook 'lang' 属性，
+  则将以指定的语言输出目录，图形标题和表格标题以及警告标题之类的东西
+  （设置AsciiDoc'lang'属性将设置DocBook 'lang' 属性）。
 
-On the other hand, HTML output directly from AsciiDoc is much faster,
-is easily customized and can be used in situations where there is no
-suitable DocBook toolchain (for example, see the {website}[AsciiDoc
-website]).
+另一方面，直接从AsciiDoc输出的HTML速度更快，易于定制，
+并且可以在没有合适的DocBook工具链的情况下使用(示例请查看 {website}[AsciiDoc官网]).
 
 PDF生成
 ~~~~~
