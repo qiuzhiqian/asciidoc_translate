@@ -211,18 +211,14 @@ AsciiDoc无需DocBook工具链即可直接生成样式精美的HTML，但是走D
 
 PDF生成
 ~~~~~
-There are two commonly used tools to generate PDFs from DocBook,
-<<X31,dblatex>> and <<X14,FOP>>.
+有两种常用的从DocBook生成PDF的工具，
+<<X31,dblatex>> 和 <<X14,FOP>>。
 
-.dblatex or FOP?
-- 'dblatex' is easier to install, there's zero configuration
-  required and no Java VM to install -- it just works out of the box.
-- 'dblatex' source code highlighting and numbering is superb.
-- 'dblatex' is easier to use as it converts DocBook directly to PDF
-  whereas before using 'FOP' you have to convert DocBook to XML-FO
-  using <<X13,DocBook XSL Stylesheets>>.
-- 'FOP' is more feature complete (for example, callouts are processed
-  inside literal layouts) and arguably produces nicer looking output.
+.dblatex 还是 FOP?
+- 'dblatex' 很容易安装, 它不需要做额外的配置，并且也不需要安装JAVA虚拟机 -- 开箱即用。
+- 'dblatex' 源代码的高亮和行号显示非常出色。
+- “ dblatex”更易于使用，因为它将DocBook直接转换为PDF，而在使用“ FOP”之前，您必须使用 <<X13,DocBook XSL样式表>> 将DocBook转换为XML-FO。
+- 'FOP' 功能更完整（例如，标注在文字布局内处理），可以产生更好看的输出。
 
 HTML帮助文档生成
 ~~~~~~~~~~
