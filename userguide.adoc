@@ -3,6 +3,7 @@ AsciiDoc 使用手册
 Stuart Rackham <srackham@gmail.com>
 :Author Initials: SJR
 :toc:
+:toclevels: 5
 :icons:
 :numbered:
 :website: http://asciidoc.org/
@@ -1085,27 +1086,22 @@ special words.
 
 [NOTE]
 =====================================================================
-- One or more spaces must fall between the title and the delimiters.
-- The trailing title delimiter is optional.
-- The one-line title syntax can be changed by editing the
-  configuration file `[titles]` section `sect0`...`sect4` entries.
+- 标题和定界符之间必须有一个或多个空格。
+- 标题结尾定界符是可选的。
+- 可以通过编辑配置文件 `[titles]` 小节 `sect0` ... `sect4` 条目来更改单行标题语法。
 =====================================================================
 
 浮动标题
 ~~~~
-Setting the title's first positional attribute or 'style' attribute to
-'float' generates a free-floating title. A free-floating title is
-rendered just like a normal section title but is not formally
-associated with a text body and is not part of the regular section
-hierarchy so the normal ordering rules do not apply. Floating titles
-can also be used in contexts where section titles are illegal: for
-example sidebar and admonition blocks.  Example:
+将标题的第一个位置属性或 `样式` 属性设置为 `float` 会生成一个自由浮动的标题。
+自由浮动标题的呈现方式与普通节标题一样，但未与文本主体正式关联，也不属于常规节层次结构，因此常规排序规则不适用。
+浮动标题也可用于节标题不合法的情况下：例如边栏和告诫栏。例如：
 
   [float]
   The second day
   ~~~~~~~~~~~~~~
 
-Floating titles do not appear in a document's table of contents.
+浮动标题不会出现在文档的目录中。
 
 
 [[X42]]
@@ -2395,9 +2391,9 @@ within an AsciiDoc document. You can use either the standard macro
 syntax or the (preferred) alternative.
 
 [[X30]]
-anchor
-++++++
-Used to specify hypertext link targets:
+锚点
+++
+用于指定超文本链接目标:
 
   [[<id>,<xreflabel>]]
   anchor:<id>[<xreflabel>]
