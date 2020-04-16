@@ -1047,44 +1047,41 @@ special words.
 [[X17]]
 标题
 --
-Document and section titles can be in either of two formats:
+文档标题和节标题可以采用以下两种格式之一：
 
-两行标题
+双行标题
 ~~~~
-A two line title consists of a title line, starting hard against the
-left margin, and an underline. Section underlines consist a repeated
-character pairs spanning the width of the preceding title (give or
-take up to two characters):
+双行标题包含一个左边顶格开始的标题行和一个下划线行。
+下划线部分由重复的字符组成，这些字符对应其上的标题的宽度（相等或最多多两个字符）:
 
-The default title underlines for each of the document levels are:
+每个文档级别的默认标题下划线是：
 
 
-  Level 0 (top level):     ======================
-  Level 1:                 ----------------------
-  Level 2:                 ~~~~~~~~~~~~~~~~~~~~~~
-  Level 3:                 ^^^^^^^^^^^^^^^^^^^^^^
-  Level 4 (bottom level):  ++++++++++++++++++++++
+  0等级 (最高等级):       ======================
+  1等级:                 ----------------------
+  2等级:                 ~~~~~~~~~~~~~~~~~~~~~~
+  3等级:                 ^^^^^^^^^^^^^^^^^^^^^^
+  4等级 (最低等级):       ++++++++++++++++++++++
 
-Examples:
+例如:
 
-  Level One Section Title
-  -----------------------
+  等级为1的节标题
+  --------
 
-  Level 2 Subsection Title
-  ~~~~~~~~~~~~~~~~~~~~~~~~
+  等级为2的子节标题
+  ~~~~~~~~~
 
 [[X46]]
 单行标题
 ~~~~
-One line titles consist of a single line delimited on either side by
-one or more equals characters (the number of equals characters
-corresponds to the section level minus one).  Here are some examples:
+一行标题由单行组成，该行在任一侧由一个或多个等号字符定界（等号字符的数量对应于节级别减去一个）
+下面是一些例子:
 
-  = Document Title (level 0) =
-  == Section title (level 1) ==
-  === Section title (level 2) ===
-  ==== Section title (level 3) ====
-  ===== Section title (level 4) =====
+  = 文档标题 (等级 0) =
+  == 节标题 (等级 1) ==
+  === 节标题 (等级 2) ===
+  ==== 节标题 (等级 3) ====
+  ===== 节标题 (等级 4) =====
 
 [NOTE]
 =====================================================================
