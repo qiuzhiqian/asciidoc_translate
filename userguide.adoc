@@ -1107,10 +1107,9 @@ special words.
 [[X42]]
 块标题
 ---
-A 'BlockTitle' element is a single line beginning with a period
-followed by the title text. A BlockTitle is applied to the immediately
-following Paragraph, DelimitedBlock, List, Table or BlockMacro. For
-example:
+'BlockTitle' 元素是单行，以点标点(.)开头，后跟标题文本。
+BlockTitle应用于紧随其后的Paragraph，DelimitedBlock，List，Table或BlockMacro。
+例如:
 
 ........................
 .Notes
@@ -1118,7 +1117,7 @@ example:
 - Note 2.
 ........................
 
-is rendered as:
+这会被渲染成这样:
 
 .Notes
 - Note 1.
@@ -1126,8 +1125,8 @@ is rendered as:
 
 
 [[X41]]
-BlockId Element
----------------
+块id元素
+-----
 A 'BlockId' is a single line block element containing a unique
 identifier enclosed in double square brackets. It is used to assign an
 identifier to the ensuing block element. For example:
