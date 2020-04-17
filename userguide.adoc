@@ -1127,26 +1127,20 @@ BlockTitle应用于紧随其后的Paragraph，DelimitedBlock，List，Table或Bl
 [[X41]]
 块id元素
 -----
-A 'BlockId' is a single line block element containing a unique
-identifier enclosed in double square brackets. It is used to assign an
-identifier to the ensuing block element. For example:
+'BlockId' 是一个单行块元素，其中包含一个用双方括号括起来的唯一标识符。 用于将标识符分配给随后的块元素。
+例如：
 
   [[chapter-titles]]
   Chapter titles can be ...
 
-The preceding example identifies the ensuing paragraph so it can be
-referenced from other locations, for example with
+上面的示例标识了随后的段落，因此可以从其他位置引用该段落, 就像这样
 `<<chapter-titles,chapter titles>>`.
 
-'BlockId' elements can be applied to Title, Paragraph, List,
-DelimitedBlock, Table and BlockMacro elements.  The BlockId element
-sets the `{id}` attribute for substitution in the subsequent block's
-markup template. If a second positional argument is supplied it sets
-the `{reftext}` attribute which is used to set the DocBook `xreflabel`
-attribute.
+'BlockId' 元素可以应用于Title，Paragraph，List，DelimitedBlock，Table和BlockMacro元素。
+BlockId元素设置 `{id}` 属性以在后续块的标记模板中进行替换。
+如果提供了第二个位置参数，它将设置 `{reftext}` 属性，该属性用于设置DocBook的 `xreflabel` 属性。
 
-The 'BlockId' element has the same syntax and serves the same function
-to the <<X30,anchor inline macro>>.
+'BlockId' 元素与 <<X30,锚定内联宏>> 具有相同的语法和相同的功能。
 
 [[X79]]
 AttributeList Element
